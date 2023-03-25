@@ -23,7 +23,7 @@ window.addEventListener("load", async ()=>{
        
  let data2 = await data();
     
-
+console.log(data2);
     let obj2 = "";
 
     data2?.forEach(element => {
@@ -35,10 +35,11 @@ window.addEventListener("load", async ()=>{
          </div>
          <div class="text">
              <div class="title">
-                 <h2>${element.title.slice(0,19)}</h2>
+                 <h2>${element.category
+                    .slice(0,19)}</h2>
              </div>
              <div class="description">
-                 <p>Lorem ipsum dolor sit amet consectetur adipisicin</p>
+                 <p>${element.title.slice(0,25)}</p>
              </div>
              <div class="price">
                  <p>${element.price}</p>
@@ -60,7 +61,7 @@ console.log(data);
         let value = e.target.value;
 
 
-        let filter = data.filter((item)=>{
+        let filter = data2?.filter((item)=>{
 
            return item.title.toLowerCase().includes(value.toLowerCase());
 
@@ -81,7 +82,7 @@ console.log(data);
          </div>
          <div class="text">
              <div class="title">
-                 <h2>${element.title.slice(0,10)}</h2>
+                 <h2>${element.title.slice(0,19)}</h2>
              </div>
              <div class="description">
                  <p>Lorem ipsum dolor sit amet consectetur adipisicin</p>
